@@ -1,0 +1,21 @@
+<div *ngIf="hero">
+    <p-card class="ui-g-12 ui-md-4">
+        <p-header>
+            <h2 style="margin-left: 0.5em;">{{ hero.name | uppercase }}</h2>
+        </p-header>
+        <div style="display: flex;">
+            <h3 style="margin-right: 1em;">id: </h3> <h4>{{hero.id}}</h4>   
+        </div>
+        <div>
+            <label style="font-weight: bold;">Name:
+                <input type="text" pInputText [(ngModel)]="hero.name" placeholder="name" />
+            </label>
+        </div>
+        <p-footer>
+            <div style="display: flex; flex-direction: row; justify-content: space-between;">
+                <button pButton type="button" (click)="goBack()" label="Back" class="ui-button-raised"></button>       
+                <button pButton type="button" (click)="save()" label="Save" class="ui-button-raised ui-button-success"></button> 
+            </div>
+        </p-footer>
+    </p-card>
+</div>

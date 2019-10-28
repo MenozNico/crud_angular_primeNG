@@ -1,0 +1,12 @@
+.grid {
+  display: flex;
+  justify-content: center;
+}
+
+.col-1-4 {
+  width: 22%;
+}
+
+.module.hero {
+  text-align: center;
+}

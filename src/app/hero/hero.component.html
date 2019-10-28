@@ -1,0 +1,20 @@
+<h2>My Heroes</h2>
+
+<div>
+    <div class="ui-inputgroup">
+        <input type="text" #heroName pInputText placeholder="Hero name">   
+        <button pButton type="button" (click)="add(heroName.value); heroName.value=''" icon="pi pi-plus" class="ui-button-primary"></button>      
+    </div>
+</div>
+
+<ul class="heroes">
+    <li *ngFor="let hero of heroes" style="display: flex; justify-content: space-between;">
+        <a routerLink="/detail/{{hero.id}}" style="font-weight: bold;">
+        <span class="badge" style="font-weight: bold;">{{hero.id}}</span> {{hero.name}}
+        </a>
+        <button pButton icon="pi pi-times" class="ui-button-danger" title="delete hero" (click)="delete(hero)"></button>
+    </li>
+</ul>
+
+
+
